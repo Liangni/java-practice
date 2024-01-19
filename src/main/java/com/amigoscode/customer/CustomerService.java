@@ -18,14 +18,9 @@ public class CustomerService {
         return customerDao.selectAllCustomers();
     }
 
-    public Optional getCustomer(Integer id) {
-        //        return customerDao.selectCustomerById(id)
-//                .orElseThrow(() ->  new ResourceNotFound("customer with id [%s] not found".formatted(id)));
-
-        Optional customer = customerDao.selectCustomerById(id);
-        if (customer.isPresent()) return customer;
-        throw new ResourceNotFound(
-                "customer with id [%s] not found".formatted(id));
+    public Customer getCustomer(Integer id) {
+                return customerDao.selectCustomerById(id)
+                .orElseThrow(() ->  new ResourceNotFound("customer with id [%s] not found".formatted(id)));
     }
 
     public void addCustomer(CustomerRegistrationRequest customerRegistrationRequest) {

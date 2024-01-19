@@ -21,7 +21,7 @@ public class CustomerController {
     }
 
     @GetMapping("api/v1/customers/{customerId}")
-    public Optional getCustomer(@PathVariable("customerId") Integer customerId) {
+    public Customer getCustomer(@PathVariable("customerId") Integer customerId) {
         return customerService.getCustomer(customerId);
     }
 }

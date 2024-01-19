@@ -5,6 +5,6 @@ import java.util.Optional;
 
 public interface CustomerDao {
     List<Customer> selectAllCustomers();
-    Optional selectCustomerById(Integer id);
+    Optional<Customer> selectCustomerById(Integer id);
     void insertCustomer(Customer customer);
 }

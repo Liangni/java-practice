@@ -1,6 +1,9 @@
-package com.amigoscode.customer;
+package com.amigoscode.service;
 
+import com.amigoscode.dao.CustomerDao;
+import com.amigoscode.dto.CustomerRegistrationRequest;
 import com.amigoscode.exception.DuplicateResourceException;
+import com.amigoscode.model.Customer;
 import com.amigoscode.exception.ResourceNotFound;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -24,14 +27,14 @@ public class CustomerService {
     }
 
     public void addCustomer(CustomerRegistrationRequest customerRegistrationRequest) {
-        // check if email exists
+//         check if email exists
         String email = customerRegistrationRequest.email();
         if (customerDao.existsPersonWithEmail(email)) {
             throw new DuplicateResourceException(
                     "email already taken"
             );
         }
-        // add
+//         add
         Customer customer = new Customer(
                 customerRegistrationRequest.name(),
                 customerRegistrationRequest.email(),

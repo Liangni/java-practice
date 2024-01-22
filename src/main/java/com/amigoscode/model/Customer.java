@@ -1,6 +1,5 @@
-package com.amigoscode.customer;
+package com.amigoscode.model;
 
-import com.amigoscode.Main;
 import jakarta.persistence.*;
 
 import java.util.Objects;

@@ -1,9 +1,10 @@
-package com.amigoscode.customer;
+package com.amigoscode.controller;
 
+import com.amigoscode.model.Customer;
+import com.amigoscode.service.CustomerService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("api/v1/customers")
@@ -23,8 +24,8 @@ public class CustomerController {
     public Customer getCustomer(@PathVariable("customerId") Integer customerId) {
         return customerService.getCustomer(customerId);
     }
-    @PostMapping
-    public void registerCustomer(@RequestBody CustomerRegistrationRequest request) {
-        customerService.addCustomer(request);
-    }
+//    @PostMapping
+//    public void registerCustomer(@RequestBody CustomerRegistrationRequest request) {
+//        customerService.addCustomer(request);
+//    }
 }

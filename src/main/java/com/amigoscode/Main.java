@@ -1,12 +1,10 @@
 package com.amigoscode;
 
-import com.amigoscode.customer.Customer;
-import com.amigoscode.customer.CustomerController;
-import com.amigoscode.customer.CustomerRepository;
+import com.amigoscode.model.Customer;
+import com.amigoscode.repository.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 import java.util.List;

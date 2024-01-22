@@ -1,4 +1,6 @@
-package com.amigoscode.customer;
+package com.amigoscode.dao;
+
+import com.amigoscode.model.Customer;
 
 import java.util.List;
 import java.util.Optional;

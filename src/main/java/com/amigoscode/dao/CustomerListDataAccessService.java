@@ -1,5 +1,6 @@
-package com.amigoscode.customer;
+package com.amigoscode.dao;
 
+import com.amigoscode.model.Customer;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

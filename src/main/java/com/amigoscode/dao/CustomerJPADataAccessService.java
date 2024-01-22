@@ -1,12 +1,14 @@
-package com.amigoscode.customer;
+package com.amigoscode.dao;
 
+import com.amigoscode.model.Customer;
+import com.amigoscode.repository.CustomerRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository("jpa")
-public class CustomerJPADataAccessService implements CustomerDao{
+public class CustomerJPADataAccessService implements CustomerDao {
     private CustomerRepository customerRepository;
 
     public CustomerJPADataAccessService(CustomerRepository customerRepository) {

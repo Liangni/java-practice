@@ -1,6 +1,6 @@
 package com.amigoscode.repository;
 
-import com.amigoscode.model.Customer;
+import com.amigoscode.domain.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 // @Repository

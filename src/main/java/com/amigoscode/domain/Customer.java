@@ -1,4 +1,4 @@
-package com.amigoscode.model;
+package com.amigoscode.domain;
 
 import jakarta.persistence.*;
 

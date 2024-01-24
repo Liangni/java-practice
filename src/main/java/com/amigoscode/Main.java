@@ -1,6 +1,6 @@
 package com.amigoscode;
 
-import com.amigoscode.model.Customer;
+import com.amigoscode.domain.Customer;
 import com.amigoscode.repository.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

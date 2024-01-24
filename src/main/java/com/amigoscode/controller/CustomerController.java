@@ -1,6 +1,6 @@
 package com.amigoscode.controller;
 
-import com.amigoscode.model.Customer;
+import com.amigoscode.domain.Customer;
 import com.amigoscode.service.CustomerService;
 import org.springframework.web.bind.annotation.*;
 

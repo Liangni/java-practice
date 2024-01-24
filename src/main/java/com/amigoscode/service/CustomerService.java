@@ -1,10 +1,10 @@
 package com.amigoscode.service;
 
 import com.amigoscode.dao.CustomerDao;
-import com.amigoscode.dto.CustomerRegistrationRequest;
+import com.amigoscode.domain.CustomerRegistrationRequest;
 import com.amigoscode.exception.DuplicateResourceException;
-import com.amigoscode.model.Customer;
-import com.amigoscode.exception.ResourceNotFound;
+import com.amigoscode.domain.Customer;
+import com.amigoscode.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ public class CustomerService {
 
     public Customer getCustomer(Integer id) {
                 return customerDao.selectCustomerById(id)
-                .orElseThrow(() ->  new ResourceNotFound("customer with id [%s] not found".formatted(id)));
+                .orElseThrow(() ->  new ResourceNotFoundException("customer with id [%s] not found".formatted(id)));
     }
 
     public void addCustomer(CustomerRegistrationRequest customerRegistrationRequest) {
